@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maher Hammad | IT Leader • PMP® • Kuwait</title>
+<meta name="description" content="Maher Hammad — IT Manager & PMP Certified Project Leader. 14+ years across Kuwait's mega projects.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#060D1F;--navy2:#0C1730;--navy3:#16264A;--gold:#D4AF37;--goldL:#F0D585;
+--text:#CCD6F6;--muted:#8892B0;--white:#E6F1FF;--green:#3DDC84}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--text);font-family:'Montserrat',sans-serif;overflow-x:hidden}
+html[dir="rtl"] body{font-family:'Cairo',sans-serif}
+::selection{background:var(--gold);color:var(--navy)}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* ===== BOOT SCREEN ===== */
+#boot{position:fixed;inset:0;background:#04070F;z-index:999;display:flex;flex-direction:column;
+ justify-content:center;padding:8%;transition:opacity .8s}
+#boot.off{opacity:0;pointer-events:none}
+#boot .line{font-family:'JetBrains Mono',monospace;color:var(--green);font-size:clamp(.75rem,2vw,1rem);
+ margin-bottom:10px;white-space:pre-wrap}
+#boot .line .g{color:var(--gold)}
+#boot .skip{position:absolute;bottom:30px;right:30px;color:var(--muted);border:1px solid var(--muted);
+ background:none;padding:8px 20px;border-radius:6px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:.75rem}
+#boot .skip:hover{color:var(--gold);border-color:var(--gold)}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;
+ padding:16px 5%;background:rgba(6,13,31,.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,175,55,.15)}
+.logo{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--white);font-size:1.1rem}
+.logo b{color:var(--gold)}
+.logo i{color:var(--green);font-style:normal;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:0}}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--text);text-decoration:none;font-size:.83rem;font-weight:600;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.lang-btn{background:transparent;border:1.5px solid var(--gold);color:var(--gold);padding:6px 16px;border-radius:30px;
+ font-weight:700;cursor:pointer;font-family:inherit;font-size:.83rem;transition:.3s}
+.lang-btn:hover{background:var(--gold);color:var(--navy)}
+.burger{display:none;background:none;border:none;color:var(--gold);font-size:1.6rem;cursor:pointer}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:120px 5% 60px}
+#net{position:absolute;inset:0;z-index:0}
+.hero-in{position:relative;z-index:2;display:flex;align-items:center;gap:60px;flex-wrap:wrap;max-width:1200px;margin:auto;width:100%}
+.hero-txt{flex:1;min-width:300px}
+.hud{font-family:'JetBrains Mono',monospace;color:var(--green);font-size:.75rem;letter-spacing:2px;margin-bottom:16px}
+.hud b{color:var(--gold)}
+.hero h1{font-size:clamp(2.4rem,5.5vw,4.2rem);color:var(--white);font-weight:800;line-height:1.08}
+.hero h1 span{color:var(--gold)}
+#typed{color:var(--goldL);font-size:clamp(1rem,2.3vw,1.35rem);font-weight:600;margin:16px 0 12px;min-height:1.6em;display:block;font-family:'JetBrains Mono',monospace}
+#typed::after{content:"▌";color:var(--green);animation:blink 1s infinite}
+.hero p.tag{color:var(--muted);max-width:560px;font-size:.93rem;line-height:1.75}
+.cta-row{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:13px 30px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.88rem;transition:.3s;cursor:pointer;font-family:inherit;display:inline-block}
+.btn-gold{background:var(--gold);color:var(--navy);border:none}
+.btn-gold:hover{background:var(--goldL);transform:translateY(-3px);box-shadow:0 10px 25px rgba(212,175,55,.25)}
+.btn-ghost{border:1.5px solid var(--gold);color:var(--gold);background:rgba(6,13,31,.5)}
+.btn-ghost:hover{background:rgba(212,175,55,.12);transform:translateY(-3px)}
+
+/* Photo hex frame */
+.hero-img{position:relative;width:300px;height:330px;flex-shrink:0;margin:auto}
+.hex{width:100%;height:100%;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+ background:linear-gradient(145deg,var(--gold),transparent 60%);padding:4px;position:relative;animation:float 5s ease-in-out infinite}
+.hex .in{width:100%;height:100%;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);overflow:hidden;background:var(--navy2)}
+.hex img{width:100%;height:100%;object-fit:cover;object-position:top}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.ring{position:absolute;inset:-22px;border:1px dashed rgba(212,175,55,.35);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);animation:float 5s ease-in-out infinite .3s}
+.stat-float{position:absolute;background:var(--navy2);border:1px solid var(--gold);border-radius:10px;
+ padding:8px 14px;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--goldL);box-shadow:0 8px 25px rgba(0,0,0,.5);animation:float 4s ease-in-out infinite}
+.sf1{top:8px;left:-46px}.sf2{bottom:30px;right:-40px;animation-delay:.6s}
+html[dir="rtl"] .sf1{left:auto;right:-46px}html[dir="rtl"] .sf2{right:auto;left:-40px}
+
+/* counters strip */
+.counters{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:16px;justify-content:center;
+ max-width:1200px;margin:60px auto 0;width:100%}
+.counter{background:rgba(12,23,48,.8);backdrop-filter:blur(8px);border:1px solid rgba(212,175,55,.2);
+ border-radius:12px;padding:18px 26px;min-width:140px;text-align:center;transition:.3s}
+.counter:hover{transform:translateY(-6px);border-color:var(--gold)}
+.counter .num{font-size:1.8rem;font-weight:800;color:var(--gold);font-family:'JetBrains Mono',monospace}
+.counter .lbl{font-size:.68rem;color:var(--muted);margin-top:5px;letter-spacing:1px;text-transform:uppercase}
+
+/* ===== SECTIONS (shared) ===== */
+section{padding:90px 5%;max-width:1200px;margin:auto}
+.sec-tag{font-family:'JetBrains Mono',monospace;color:var(--green);font-size:.72rem;letter-spacing:2px;margin-bottom:10px}
+.sec-title{font-size:clamp(1.6rem,4vw,2.2rem);color:var(--white);font-weight:800;margin-bottom:8px}
+.sec-title span{color:var(--gold)}
+.sec-sub{color:var(--muted);margin-bottom:44px;font-size:.93rem}
+
+/* persona */
+.personas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.persona-btn{flex:1;min-width:210px;background:var(--navy2);border:1.5px solid rgba(212,175,55,.2);border-radius:14px;
+ padding:20px;cursor:pointer;transition:.3s;text-align:center;color:var(--text);font-family:inherit}
+.persona-btn .ico{font-size:1.7rem;display:block;margin-bottom:8px}
+.persona-btn .t{font-weight:700;color:var(--white)}
+.persona-btn .d{font-size:.75rem;color:var(--muted);margin-top:5px;display:block}
+.persona-btn.active{border-color:var(--gold);background:linear-gradient(145deg,var(--navy2),var(--navy3));box-shadow:0 10px 30px rgba(212,175,55,.12)}
+.persona-btn.active .t{color:var(--gold)}
+.persona-view{background:var(--navy2);border:1px solid rgba(212,175,55,.2);border-radius:16px;padding:34px;animation:fade .5s}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1}}
+.persona-view h3{color:var(--gold);font-size:1.15rem;margin-bottom:14px}
+.persona-view ul{list-style:none}
+.persona-view li{padding:8px 0 8px 26px;position:relative;font-size:.9rem;line-height:1.6}
+.persona-view li::before{content:"▹";color:var(--gold);position:absolute;left:0}
+html[dir="rtl"] .persona-view li{padding:8px 26px 8px 0}
+html[dir="rtl"] .persona-view li::before{left:auto;right:0}
+
+/* timeline */
+.timeline{position:relative;padding-left:30px}
+html[dir="rtl"] .timeline{padding-left:0;padding-right:30px}
+.timeline::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(var(--gold),transparent)}
+html[dir="rtl"] .timeline::before{left:auto;right:8px}
+.t-item{position:relative;margin-bottom:32px;background:var(--navy2);border:1px solid rgba(212,175,55,.15);border-radius:14px;padding:26px;transition:.3s}
+.t-item:hover{border-color:var(--gold);transform:translateX(6px)}
+html[dir="rtl"] .t-item:hover{transform:translateX(-6px)}
+.t-item::before{content:"";position:absolute;left:-28px;top:32px;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px var(--gold)}
+html[dir="rtl"] .t-item::before{left:auto;right:-28px}
+.t-date{color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:1px;font-family:'JetBrains Mono',monospace}
+.t-role{color:var(--white);font-size:1.12rem;font-weight:700;margin:6px 0 2px}
+.t-org{color:var(--muted);font-size:.85rem;margin-bottom:10px}
+.t-item p{font-size:.88rem;line-height:1.7}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.chip{background:rgba(212,175,55,.1);color:var(--goldL);font-size:.7rem;padding:4px 11px;border-radius:20px;font-weight:600}
+
+/* dashboard */
+.dash{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.kpi{background:var(--navy2);border:1px solid rgba(212,175,55,.15);border-radius:14px;padding:26px;transition:.3s}
+.kpi:hover{border-color:var(--gold);transform:translateY(-5px)}
+.kpi .v{font-size:2rem;font-weight:800;color:var(--gold);font-family:'JetBrains Mono',monospace}
+.kpi .k{color:var(--white);font-weight:700;margin:8px 0 4px;font-size:.92rem}
+.kpi .s{color:var(--muted);font-size:.78rem;line-height:1.5}
+.bar{height:5px;background:var(--navy3);border-radius:6px;margin-top:14px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--goldL));width:0;transition:width 1.4s ease}
+
+/* tech + certs + cv + contact */
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.tech-cat{background:var(--navy2);border:1px solid rgba(212,175,55,.15);border-radius:14px;padding:22px;transition:.3s}
+.tech-cat:hover{border-color:var(--gold)}
+.tech-cat h4{color:var(--gold);font-size:.92rem;margin-bottom:12px}
+.tech-cat span{display:inline-block;background:var(--navy3);font-size:.72rem;padding:5px 10px;border-radius:6px;margin:3px 2px}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.cert{background:var(--navy2);border:1px solid rgba(212,175,55,.15);border-radius:12px;padding:18px;display:flex;gap:12px;align-items:center;transition:.3s}
+.cert:hover{border-color:var(--gold);transform:translateY(-4px)}
+.cert .n{color:var(--white);font-weight:700;font-size:.85rem}
+.cert .y{color:var(--muted);font-size:.72rem}
+.cv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.cv-card{background:var(--navy2);border:1.5px solid rgba(212,175,55,.2);border-radius:16px;padding:30px;text-align:center;transition:.3s}
+.cv-card:hover{border-color:var(--gold);transform:translateY(-6px)}
+.cv-card .ic{font-size:2rem;margin-bottom:12px}
+.cv-card h4{color:var(--white);margin-bottom:8px}
+.cv-card p{color:var(--muted);font-size:.8rem;margin-bottom:18px;line-height:1.6}
+.contact-box{background:linear-gradient(145deg,var(--navy2),var(--navy3));border:1px solid rgba(212,175,55,.25);border-radius:20px;padding:50px 6%;text-align:center}
+.contact-links{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:28px}
+footer{text-align:center;padding:28px;color:var(--muted);font-size:.75rem;border-top:1px solid rgba(212,175,55,.1);font-family:'JetBrains Mono',monospace}
+.reveal{opacity:0;transform:translateY(30px);transition:.8s}
+.reveal.on{opacity:1;transform:none}
+@media(max-width:768px){
+ .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy2);flex-direction:column;padding:22px}
+ .nav-links.open{display:flex}
+ .burger{display:block}
+ .hero-in{flex-direction:column-reverse;text-align:center}
+ .cta-row{justify-content:center}
+ .hero p.tag{margin:auto}
+ .sf1{left:-10px}.sf2{right:-10px}
+}
+</style>
+</head>
+<body>
+
+<!-- BOOT -->
+<div id="boot">
+  <div id="bootLines"></div>
+  <button class="skip" onclick="endBoot()">SKIP ></button>
+</div>
+
+<nav>
+  <div class="logo">&gt; maher<b>@</b>hammad<b>:</b>~<i>_</i></div>
+  <div class="nav-links" id="navLinks">
+    <a href="#profiles" data-en="Expertise" data-ar="الخبرات">Expertise</a>
+    <a href="#journey" data-en="Journey" data-ar="المسيرة">Journey</a>
+    <a href="#impact" data-en="Impact" data-ar="الإنجازات">Impact</a>
+    <a href="#tech" data-en="Tech" data-ar="التقنيات">Tech</a>
+    <a href="#cv" data-en="CV" data-ar="السيرة">CV</a>
+    <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+    <button class="lang-btn" onclick="toggleLang()" id="langBtn">العربية</button>
+  </div>
+  <button class="burger" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <canvas id="net"></canvas>
+  <div style="width:100%">
+  <div class="hero-in">
+    <div class="hero-txt">
+      <div class="hud" data-en="[ SYSTEM ONLINE ] LOCATION: <b>KUWAIT</b> • STATUS: <b>OPEN TO GCC / JORDAN / GLOBAL</b>" data-ar="[ النظام متصل ] الموقع: <b>الكويت</b> • الحالة: <b>متاح للخليج / الأردن / العالم</b>">[ SYSTEM ONLINE ] LOCATION: <b>KUWAIT</b> • STATUS: <b>OPEN TO GCC / JORDAN / GLOBAL</b></div>
+      <h1 data-en='Maher <span>Hammad</span>' data-ar='ماهر <span>حمّاد</span>'>Maher <span>Hammad</span></h1>
+      <span id="typed"></span>
+      <p class="tag" data-en="14+ years engineering, delivering and leading enterprise technology — oil & gas, ISP, government, and mega water-treatment projects. From boardroom strategy to server room execution."
+         data-ar="أكثر من 14 عاماً في هندسة وقيادة وتسليم التكنولوجيا المؤسسية — النفط والغاز، الاتصالات، القطاع الحكومي، والمشاريع الضخمة. من استراتيجية مجلس الإدارة إلى تنفيذ غرفة الخوادم.">14+ years engineering, delivering and leading enterprise technology — oil & gas, ISP, government, and mega water-treatment projects. From boardroom strategy to server room execution.</p>
+      <div class="cta-row">
+        <a href="#cv" class="btn btn-gold" data-en="⬇ Download CV" data-ar="⬇ تحميل السيرة">⬇ Download CV</a>
+        <a href="#contact" class="btn btn-ghost" data-en="Initiate Contact" data-ar="ابدأ التواصل">Initiate Contact</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="ring"></div>
+      <div class="hex"><div class="in"><img src="profile.jpg" alt="Maher Hammad" onerror="this.style.display='none'"></div></div>
+      <div class="stat-float sf1">PMP® Certified ✓</div>
+      <div class="stat-float sf2">14+ Yrs Experience</div>
+    </div>
+  </div>
+  <div class="counters">
+    <div class="counter"><div class="num" data-target="14">0</div><div class="lbl" data-en="Years Exp" data-ar="سنة خبرة">Years Exp</div></div>
+    <div class="counter"><div class="num" data-target="95" data-suffix="%">0</div><div class="lbl" data-en="On-Time Delivery" data-ar="تسليم بالموعد">On-Time Delivery</div></div>
+    <div class="counter"><div class="num" data-target="1" data-prefix="$" data-suffix="M+">0</div><div class="lbl" data-en="Budgets" data-ar="ميزانيات">Budgets</div></div>
+    <div class="counter"><div class="num" data-target="10" data-suffix="+">0</div><div class="lbl" data-en="Team Led" data-ar="فريق">Team Led</div></div>
+    <div class="counter"><div class="num" data-target="3000" data-suffix="+">0</div><div class="lbl" data-en="Users" data-ar="مستخدم">Users</div></div>
+  </div>
+  </div>
+</header>
+
+<!-- PERSONA -->
+<section id="profiles" class="reveal">
+  <div class="sec-tag">// SELECT_MODE</div>
+  <h2 class="sec-title" data-en='What are you <span>hiring for?</span>' data-ar='ما الوظيفة التي <span>تبحث عنها؟</span>'>What are you <span>hiring for?</span></h2>
+  <p class="sec-sub" data-en="One professional. Three proven capabilities. The content adapts to your need." data-ar="محترف واحد. ثلاث قدرات مثبتة. المحتوى يتكيّف مع احتياجك.">One professional. Three proven capabilities. The content adapts to your need.</p>
+  <div class="personas">
+    <button class="persona-btn active" onclick="setPersona('mgr',this)"><span class="ico">👔</span><span class="t" data-en="IT Manager" data-ar="مدير تكنولوجيا المعلومات">IT Manager</span><span class="d" data-en="Strategy • Teams • Budgets" data-ar="استراتيجية • فرق • ميزانيات">Strategy • Teams • Budgets</span></button>
+    <button class="persona-btn" onclick="setPersona('pm',this)"><span class="ico">📋</span><span class="t" data-en="IT Project Manager" data-ar="مدير مشاريع تقنية">IT Project Manager</span><span class="d" data-en="PMP • Delivery • Governance" data-ar="PMP • تسليم • حوكمة">PMP • Delivery • Governance</span></button>
+    <button class="persona-btn" onclick="setPersona('sys',this)"><span class="ico">⚙️</span><span class="t" data-en="Systems Expert" data-ar="خبير أنظمة">Systems Expert</span><span class="d" data-en="Cloud • Infra • Security" data-ar="سحابة • بنية • أمن">Cloud • Infra • Security</span></button>
+  </div>
+  <div class="persona-view" id="personaView"></div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="reveal">
+  <div class="sec-tag">// CAREER_LOG</div>
+  <h2 class="sec-title" data-en='Career <span>Journey</span>' data-ar='المسيرة <span>المهنية</span>'>Career <span>Journey</span></h2>
+  <p class="sec-sub" data-en="15 years across Kuwait's most demanding environments." data-ar="خمسة عشر عاماً في أكثر البيئات تطلباً.">15 years across Kuwait's most demanding environments.</p>
+  <div class="timeline">
+    <div class="t-item">
+      <div class="t-date">2025 — PRESENT</div>
+      <div class="t-role" data-en="IT Project Manager" data-ar="مدير مشاريع تكنولوجيا المعلومات">IT Project Manager</div>
+      <div class="t-org" data-en="Insiyabi IT Co. — Environment Public Authority (EPA), Kuwait" data-ar="شركة انسيابي — الهيئة العامة للبيئة، الكويت">Insiyabi IT Co. — Environment Public Authority (EPA), Kuwait</div>
+      <p data-en="End-to-end IT & telecom delivery: enterprise voice (Alcatel OXE, SIP, ALE SBC), hybrid cloud on Azure & VMware, identity federation, and government operational handover."
+         data-ar="تسليم شامل لمشاريع التقنية والاتصالات: أنظمة الصوت المؤسسية (Alcatel OXE، SIP، ALE SBC)، سحابة هجينة عبر Azure و VMware، وتسليم تشغيلي للجهات الحكومية.">End-to-end IT & telecom delivery: enterprise voice (Alcatel OXE, SIP, ALE SBC), hybrid cloud on Azure & VMware, identity federation, and government operational handover.</p>
+      <div class="chips"><span class="chip">Azure</span><span class="chip">VMware</span><span class="chip">Alcatel OXE</span><span class="chip">Gov Sector</span></div>
+    </div>
+    <div class="t-item">
+      <div class="t-date">2019 — 2025</div>
+      <div class="t-role" data-en="IT Manager" data-ar="مدير تكنولوجيا المعلومات">IT Manager</div>
+      <div class="t-org" data-en="WTE Wassertechnik GmbH — Umm Al Hayman Mega Project, Kuwait" data-ar="WTE الألمانية — مشروع أم الهيمان الضخم، الكويت">WTE Wassertechnik GmbH — Umm Al Hayman Mega Project, Kuwait</div>
+      <p data-en="Directed the full IT function: $1M+ budgets, 10+ team, 15+ vendors, on-prem & cloud infrastructure, Dynamics 365 ERP automation — cutting delays 35% and halving incident time."
+         data-ar="إدارة كاملة لقطاع التقنية: ميزانيات +1M$، فريق +10، موردون +15، بنية محلية وسحابية، وأتمتة Dynamics 365 — خفض التأخير 35% وتقليص زمن الحوادث للنصف.">Directed the full IT function: $1M+ budgets, 10+ team, 15+ vendors, on-prem & cloud infrastructure, Dynamics 365 ERP automation — cutting delays 35% and halving incident time.</p>
+      <div class="chips"><span class="chip">Leadership</span><span class="chip">$1M+ Budget</span><span class="chip">Dynamics 365</span><span class="chip">95% On-Time</span></div>
+    </div>
+    <div class="t-item">
+      <div class="t-date">2016 — 2019</div>
+      <div class="t-role" data-en="Senior IT Administrator" data-ar="مسؤول أنظمة أول">Senior IT Administrator</div>
+      <div class="t-org" data-en="B.Online (formerly Gulfnet) — ISP, Kuwait" data-ar="B.Online (جلف نت سابقاً) — مزود إنترنت، الكويت">B.Online (formerly Gulfnet) — ISP, Kuwait</div>
+      <p data-en="Enterprise Windows Server, AD, M365/Exchange, VMware/Hyper-V/Proxmox, Veeam, SAN/NAS/vSAN, FortiGate/pfSense security & full datacenter operations."
+         data-ar="خوادم Windows المؤسسية، AD، M365 و Exchange، الافتراضية VMware و Hyper-V و Proxmox، Veeam، تخزين SAN/NAS/vSAN، أمن FortiGate و pfSense وعمليات مركز بيانات كاملة.">Enterprise Windows Server, AD, M365/Exchange, VMware/Hyper-V/Proxmox, Veeam, SAN/NAS/vSAN, FortiGate/pfSense security & full datacenter operations.</p>
+      <div class="chips"><span class="chip">Windows Server</span><span class="chip">Virtualization</span><span class="chip">Datacenter</span></div>
+    </div>
+    <div class="t-item">
+      <div class="t-date">2014 — 2016</div>
+      <div class="t-role" data-en="IT Project Engineer" data-ar="مهندس مشاريع تقنية">IT Project Engineer</div>
+      <div class="t-org" data-en="Al-Diyar United — Kuwait Petroleum Corporation (KPC)" data-ar="الديار المتحدة — مؤسسة البترول الكويتية (KPC)">Al-Diyar United — Kuwait Petroleum Corporation (KPC)</div>
+      <p data-en="Windows domain for 3,000+ users in oil & gas; 150+ L2/L3 tickets weekly via BMC Remedy."
+         data-ar="بنية Windows Domain لأكثر من 3000 مستخدم في النفط والغاز؛ +150 تذكرة L2/L3 أسبوعياً عبر BMC Remedy.">Windows domain for 3,000+ users in oil & gas; 150+ L2/L3 tickets weekly via BMC Remedy.</p>
+      <div class="chips"><span class="chip">Oil & Gas</span><span class="chip">3000+ Users</span><span class="chip">L2/L3</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact" class="reveal">
+  <div class="sec-tag">// PERFORMANCE_METRICS</div>
+  <h2 class="sec-title" data-en='Impact <span>Dashboard</span>' data-ar='لوحة <span>الإنجازات</span>'>Impact <span>Dashboard</span></h2>
+  <p class="sec-sub" data-en="Measurable results — reported the way an IT leader reports them." data-ar="نتائج قابلة للقياس — كما يعرضها قائد تقني.">Measurable results — reported the way an IT leader reports them.</p>
+  <div class="dash">
+    <div class="kpi"><div class="v">95%</div><div class="k" data-en="On-Time Delivery" data-ar="تسليم بالموعد">On-Time Delivery</div><div class="s" data-en="Structured planning & risk control" data-ar="تخطيط منظم وإدارة مخاطر">Structured planning & risk control</div><div class="bar"><i data-w="95%"></i></div></div>
+    <div class="kpi"><div class="v">-35%</div><div class="k" data-en="Operational Delays" data-ar="خفض التأخير">Operational Delays</div><div class="s" data-en="Policies, procedures & governance" data-ar="سياسات وإجراءات وحوكمة">Policies, procedures & governance</div><div class="bar"><i data-w="65%"></i></div></div>
+    <div class="kpi"><div class="v">-50%</div><div class="k" data-en="Incident Resolution Time" data-ar="زمن حل الحوادث">Incident Resolution Time</div><div class="s" data-en="Service design & escalation" data-ar="تصميم خدمات وتصعيد">Service design & escalation</div><div class="bar"><i data-w="50%"></i></div></div>
+    <div class="kpi"><div class="v">$500K+</div><div class="k" data-en="Procurement Optimized" data-ar="مشتريات محسّنة">Procurement Optimized</div><div class="s" data-en="Vendor negotiation & sourcing" data-ar="تفاوض وتوريد استراتيجي">Vendor negotiation & sourcing</div><div class="bar"><i data-w="80%"></i></div></div>
+    <div class="kpi"><div class="v">15+</div><div class="k" data-en="Vendors Managed" data-ar="مورّد مُدار">Vendors Managed</div><div class="s" data-en="SLA compliance improved" data-ar="تحسين الالتزام بالـ SLA">SLA compliance improved</div><div class="bar"><i data-w="75%"></i></div></div>
+    <div class="kpi"><div class="v">10+</div><div class="k" data-en="Professionals Led" data-ar="محترف بقيادتي">Professionals Led</div><div class="s" data-en="Coaching, KPIs & growth" data-ar="تدريب ومؤشرات وتطوير">Coaching, KPIs & growth</div><div class="bar"><i data-w="85%"></i></div></div>
+  </div>
+</section>
+
+<!-- TECH -->
+<section id="tech" class="reveal">
+  <div class="sec-tag">// TECH_STACK</div>
+  <h2 class="sec-title" data-en='Tech <span>Arsenal</span>' data-ar='الترسانة <span>التقنية</span>'>Tech <span>Arsenal</span></h2>
+  <p class="sec-sub" data-en="Depth across every layer of the enterprise stack." data-ar="عمق في كل طبقات البنية المؤسسية.">Depth across every layer of the enterprise stack.</p>
+  <div class="tech-grid">
+    <div class="tech-cat"><h4>☁️ Cloud & Identity</h4><span>Azure</span><span>Microsoft 365</span><span>Entra ID</span><span>Exchange Online</span><span>Hybrid Cloud</span><span>OCI</span></div>
+    <div class="tech-cat"><h4>🖥️ Systems & Virtualization</h4><span>Windows Server 08–25</span><span>Active Directory</span><span>VMware vSphere</span><span>Hyper-V</span><span>Proxmox</span><span>SQL Server</span><span>Linux</span></div>
+    <div class="tech-cat"><h4>🛡️ Security & Network</h4><span>FortiGate</span><span>WatchGuard</span><span>pfSense</span><span>VLAN / VPN</span><span>Trend Micro</span><span>ESET</span></div>
+    <div class="tech-cat"><h4>💾 Data Protection</h4><span>Veeam B&R</span><span>SAN / NAS / vSAN</span><span>Object Storage</span><span>DR & BC</span></div>
+    <div class="tech-cat"><h4>📞 Telecom & Voice</h4><span>Alcatel OXE</span><span>ALE SBC</span><span>SIP / VoIP</span><span>PBX</span><span>ALE NMS</span></div>
+    <div class="tech-cat"><h4>⚡ ERP & Automation</h4><span>Dynamics 365</span><span>Power Platform</span><span>API Integration</span><span>Odoo</span><span>BMC Remedy</span></div>
+  </div>
+</section>
+
+<!-- CERTS -->
+<section class="reveal">
+  <div class="sec-tag">// CREDENTIALS</div>
+  <h2 class="sec-title" data-en='Certification <span>Wall</span>' data-ar='جدار <span>الشهادات</span>'>Certification <span>Wall</span></h2>
+  <p class="sec-sub" data-en="Management + Cloud + Infrastructure — a rare combination." data-ar="إدارة + سحابة + بنية تحتية — مزيج نادر.">Management + Cloud + Infrastructure — a rare combination.</p>
+  <div class="certs">
+    <div class="cert"><div>🏅</div><div><div class="n">PMP — Project Management Professional</div><div class="y">PMI</div></div></div>
+    <div class="cert"><div>☁️</div><div><div class="n">Microsoft Azure Administrator</div><div class="y">2022</div></div></div>
+    <div class="cert"><div>☁️</div><div><div class="n">Oracle Cloud Infrastructure</div><div class="y">2022</div></div></div>
+    <div class="cert"><div>🔄</div><div><div class="n">Scrum Fundamentals Certified</div><div class="y">2024</div></div></div>
+    <div class="cert"><div>📈</div><div><div class="n">Six Sigma Yellow Belt</div><div class="y">2024</div></div></div>
+    <div class="cert"><div>⚙️</div><div><div class="n">Odoo Functional Certification</div><div class="y">2024</div></div></div>
+    <div class="cert"><div>🖥️</div><div><div class="n">MCSE / MCSA / MCP</div><div class="y">Microsoft — 2014</div></div></div>
+    <div class="cert"><div>📚</div><div><div class="n">ITIL Foundation v3</div><div class="y">2014</div></div></div>
+    <div class="cert"><div>🌐</div><div><div class="n">CCNA</div><div class="y">Cisco — 2010</div></div></div>
+  </div>
+</section>
+
+<!-- CV -->
+<section id="cv" class="reveal">
+  <div class="sec-tag">// DOWNLOAD_CENTER</div>
+  <h2 class="sec-title" data-en='Download the <span>Right CV</span>' data-ar='حمّل السيرة <span>المناسبة</span>'>Download the <span>Right CV</span></h2>
+  <p class="sec-sub" data-en="Tailored versions — same experience, focused presentation." data-ar="نسخ مخصصة — نفس الخبرة بتركيز مختلف.">Tailored versions — same experience, focused presentation.</p>
+  <div class="cv-grid">
+    <div class="cv-card"><div class="ic">👔</div><h4 data-en="IT Manager" data-ar="مدير تكنولوجيا المعلومات">IT Manager</h4><p data-en="Leadership, budgets, governance & strategy." data-ar="قيادة وميزانيات وحوكمة واستراتيجية.">Leadership, budgets, governance & strategy.</p><a class="btn btn-gold" href="cv/Maher-Hammad-IT-Manager.pdf" download data-en="Download PDF" data-ar="تحميل PDF">Download PDF</a></div>
+    <div class="cv-card"><div class="ic">📋</div><h4 data-en="IT Project Manager" data-ar="مدير مشاريع تقنية">IT Project Manager</h4><p data-en="PMP delivery, scope, risk & stakeholders." data-ar="تسليم PMP ونطاق ومخاطر وأصحاب مصلحة.">PMP delivery, scope, risk & stakeholders.</p><a class="btn btn-gold" href="cv/Maher-Hammad-IT-Project-Manager.pdf" download data-en="Download PDF" data-ar="تحميل PDF">Download PDF</a></div>
+    <div class="cv-card"><div class="ic">⚙️</div><h4 data-en="Sr. Systems Administrator" data-ar="مسؤول أنظمة أول">Sr. Systems Administrator</h4><p data-en="Cloud, virtualization, security & datacenter." data-ar="سحابة وافتراضية وأمن ومراكز بيانات.">Cloud, virtualization, security & datacenter.</p><a class="btn btn-gold" href="cv/Maher-Hammad-Sr-Systems-Administrator.pdf" download data-en="Download PDF" data-ar="تحميل PDF">Download PDF</a></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <div class="contact-box">
+    <h2 class="sec-title" data-en="Let's Build Something <span>Great</span>" data-ar='لنصنع شيئاً <span>عظيماً</span>'>Let's Build Something <span>Great</span></h2>
+    <p style="color:var(--muted);max-width:560px;margin:10px auto 0;font-size:.9rem;line-height:1.7"
+       data-en="Based in Kuwait — Transferable Visa (18). Open to opportunities across the GCC, Jordan & worldwide."
+       data-ar="مقيم في الكويت — إقامة قابلة للتحويل (18). متاح للفرص في الخليج والأردن والعالم.">Based in Kuwait — Transferable Visa (18). Open to opportunities across the GCC, Jordan & worldwide.</p>
+    <div class="contact-links">
+      <a class="btn btn-gold" href="mailto:Maher-Hammad@hotmail.com">📧 Email</a>
+      <a class="btn btn-ghost" href="https://wa.me/96550384844" target="_blank">💬 WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+96550384844">📞 +965 5038 4844</a>
+      <a class="btn btn-ghost" href="https://kw.linkedin.com/in/maher-hammad-4427a5a1" target="_blank">🔗 LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> MAHER_HAMMAD // IT_LEADERSHIP • PROJECT_DELIVERY • INFRASTRUCTURE</footer>
+
+<script>
+/* ===== BOOT ===== */
+const bootTxt=[
+ "> boot MAHER_HAMMAD.sys",
+ "> loading experience: [██████████████] 14+ YEARS ... OK",
+ "> mounting credentials: PMP® | AZURE | ITIL | MCSE | CCNA ... OK",
+ "> connecting sectors: OIL&GAS | ISP | GOV | MEGA_PROJECTS ... OK",
+ "> ACCESS GRANTED. WELCOME."];
+let bi=0;
+function bootNext(){
+ if(bi>=bootTxt.length){setTimeout(endBoot,600);return;}
+ const d=document.createElement('div');d.className='line';
+ d.innerHTML=bootTxt[bi].replace(/OK|ACCESS GRANTED. WELCOME./g,m=>'<span class="g">'+m+'</span>');
+ document.getElementById('bootLines').appendChild(d);bi++;setTimeout(bootNext,420);}
+function endBoot(){document.getElementById('boot').classList.add('off');}
+bootNext();
+
+/* ===== TYPED ROLES ===== */
+const rolesEN=["IT Manager","IT Project Manager • PMP®","Senior Systems Expert","Digital Transformation Leader"];
+const rolesAR=["مدير تكنولوجيا المعلومات","مدير مشاريع تقنية • PMP®","خبير أنظمة أول","قائد التحول الرقمي"];
+let ri=0,ci=0,del=false;
+function typeLoop(){
+ const roles=lang==='en'?rolesEN:rolesAR;const word=roles[ri%roles.length];
+ const el=document.getElementById('typed');
+ el.textContent=word.substring(0,ci);
+ if(!del&&ci<word.length){ci++;setTimeout(typeLoop,70);}
+ else if(!del){del=true;setTimeout(typeLoop,1600);}
+ else if(ci>0){ci--;setTimeout(typeLoop,35);}
+ else{del=false;ri++;setTimeout(typeLoop,300);}}
+ 
+/* ===== LANG ===== */
+let lang='en';
+function toggleLang(){
+ lang=lang==='en'?'ar':'en';
+ document.documentElement.lang=lang;
+ document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+ document.getElementById('langBtn').textContent=lang==='en'?'العربية':'English';
+ document.querySelectorAll('[data-en]').forEach(el=>{el.innerHTML=el.dataset[lang];});
+ renderPersona(currentPersona);}
+
+/* ===== PARTICLES ===== */
+const cv=document.getElementById('net'),ctx=cv.getContext('2d');let pts=[];
+function resize(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;
+ pts=Array.from({length:Math.min(70,cv.width/18)},()=>({x:Math.random()*cv.width,y:Math.random()*cv.height,
+ vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4}));}
+window.addEventListener('resize',resize);resize();
+(function draw(){ctx.clearRect(0,0,cv.width,cv.height);
+ pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;
+  if(p.x<0||p.x>cv.width)p.vx*=-1;if(p.y<0||p.y>cv.height)p.vy*=-1;
+  ctx.beginPath();ctx.arc(p.x,p.y,1.6,0,7);ctx.fillStyle='rgba(212,175,55,.6)';ctx.fill();});
+ for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+  const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.hypot(dx,dy);
+  if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
+   ctx.strokeStyle='rgba(212,175,55,'+(.18*(1-d/130))+')';ctx.stroke();}}
+ requestAnimationFrame(draw);})();
+
+/* ===== PERSONA ===== */
+const personaData={
+ mgr:{en:{h:"As your IT Manager, I bring:",items:["Full ownership of IT strategy, roadmaps & business alignment","$1M+ annual budgets and $500K+ procurement with proven savings","Built & led a 10+ member team — coaching, KPIs, performance systems","Governance that cut delays 35% and incident resolution time 50%","15+ vendor & stakeholder relationships with improved SLA compliance","ERP transformation: Dynamics 365 + Power Platform automation"]},
+  ar:{h:"كمدير لتكنولوجيا المعلومات، أقدم لك:",items:["ملكية كاملة لاستراتيجية التقنية وخارطة الطريق والمواءمة مع العمل","إدارة ميزانيات +1M$ ومشتريات +500K$ مع وفورات مثبتة","بناء وقيادة فريق +10 أعضاء — تدريب ومؤشرات أداء","حوكمة خفّضت التأخير 35% وزمن الحوادث 50%","علاقات مع +15 مورّد مع تعزيز الالتزام بالـ SLA","تحول رقمي: Dynamics 365 و Power Platform"]}},
+ pm:{en:{h:"As your IT Project Manager, I bring:",items:["PMP®-certified end-to-end delivery: scope, WBS, risk & change control","95% on-time record across infrastructure, cloud, telecom & ERP","Cross-functional leadership of teams, vendors & stakeholders","Government (EPA) & mega-project (Umm Al Hayman) delivery experience","Agile/Scrum, ITIL & Six Sigma applied in real enterprise delivery","Clean operational handover into stable operations"]},
+  ar:{h:"كمدير مشاريع تقنية، أقدم لك:",items:["تسليم شامل معتمد PMP®: نطاق ومخاطر وإدارة تغيير","سجل 95% تسليم بالموعد عبر البنية والسحابة والاتصالات والـ ERP","قيادة فرق وموردين وأصحاب مصلحة متعددين","خبرة مشاريع حكومية (البيئة) وضخمة (أم الهيمان)","تطبيق فعلي لـ Agile و ITIL و Six Sigma","تسليم تشغيلي نظيف لعمليات مستقرة"]}},
+ sys:{en:{h:"As your Senior Systems Expert, I bring:",items:["Windows Server 2008–2025, AD, GPO, DNS/DHCP, IIS & SQL Server","Azure + M365 hybrid cloud: identity federation & governance","VMware, Hyper-V & Proxmox virtualization at production scale","Veeam backup, SAN/NAS/vSAN & disaster-recovery readiness","FortiGate, WatchGuard, pfSense & full datacenter operations","Enterprise voice: Alcatel OXE, SIP, ALE SBC & NMS"]},
+  ar:{h:"كخبير أنظمة أول، أقدم لك:",items:["إدارة Windows Server 2008–2025 و AD و DNS/DHCP و SQL","سحابة هجينة Azure و M365: اتحاد هوية وحوكمة","افتراضية إنتاجية: VMware و Hyper-V و Proxmox","نسخ احتياطي Veeam وتخزين وجاهزية تعافٍ من الكوارث","أمن FortiGate و pfSense وعمليات مراكز بيانات كاملة","صوت مؤسسي: Alcatel OXE و SIP و ALE SBC"]}}};
+let currentPersona='mgr';
+function renderPersona(k){const d=personaData[k][lang];
+ document.getElementById('personaView').innerHTML='<h3>'+d.h+'</h3><ul>'+d.items.map(i=>'<li>'+i+'</li>').join('')+'</ul>';}
+function setPersona(k,btn){currentPersona=k;
+ document.querySelectorAll('.persona-btn').forEach(b=>b.classList.remove('active'));
+ btn.classList.add('active');renderPersona(k);}
+renderPersona('mgr');
+
+/* ===== COUNTERS / REVEAL ===== */
+function animateCounters(){document.querySelectorAll('.num').forEach(el=>{
+ const t=+el.dataset.target,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';let c=0;
+ const s=Math.max(1,Math.ceil(t/60));const iv=setInterval(()=>{c+=s;if(c>=t){c=t;clearInterval(iv);}el.textContent=pre+c+suf;},25);});}
+let counted=false;
+new IntersectionObserver(e=>{if(e[0].isIntersecting&&!counted){counted=true;animateCounters();}},{threshold:.3}).observe(document.querySelector('.counters'));
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');
+ e.target.querySelectorAll('.bar i').forEach(b=>b.style.width=b.dataset.w);}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.getElementById('yr').textContent=new Date().getFullYear();
+setTimeout(typeLoop,2800);
+</script>
+</body>
+</html>
